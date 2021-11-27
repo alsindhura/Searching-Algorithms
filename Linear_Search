@@ -1,0 +1,28 @@
+# defines a function linear_search with arguments array and search_element
+def linear_search(arr,search_element):
+
+    # iterates over the list
+    for i in range(len(arr)):
+
+        # checks the condition if the element present in the particular index of the array is equal to the search_element 
+        # if true return the index of the search_element
+        if arr[i]==search_element:
+            return i
+    
+    # else returns -1
+    return -1
+
+# gets array input from the user
+arr=[(i) for i in input().split()]
+
+# gets the search_element input from the user
+search_element=input()
+
+# calls the function
+result=linear_search(arr,search_element)
+
+# prints the result
+if result==-1:
+    print("The element is not found in the array")
+else:
+    print("The element is found in the list at the index:", result)
